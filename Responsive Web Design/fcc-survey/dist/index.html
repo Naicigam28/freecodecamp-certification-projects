@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC survey</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1 id="title">Survey for codecamp</h1>
+    <br/>
+    <p id="description">A survey to prve I can make surveys in html</p>
+    <br/>
+    <form id="survey-form"action="index.html" method="post">
+      <label id="name-label" for="name">Name:</label>
+      <input id="name" required type="text" name="name" value="" placeholder="Type your name here">
+      <br/>
+      <label id="email-label" for="email">Email:</label>
+      <input id="email" type="email" required name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email">
+      <br/>
+      <label id="number-label"for="number">Number:</label>
+      <input id="number" type="number" min="0" max="100" name="number" value="" placeholder="Enter a number">
+      <br/>
+      <label for="dropdown">What are you most interested in learning?</label>
+      <br/>
+      <select id="dropdown">
+        <option value="HTML">html</option>
+        <option value="CSS">CSS</option>
+        <option value="Javascript">Javascript</option>
+        <option value="PHP">PHP</option>
+      </select>
+      <label for="full-time">Full time or Part time?</label>
+      <br>
+      <label>full time</label>
+      <input type="radio" name="time" value="6">
+      <label>Part time</label>
+      <input type="radio" name="time" value="5" >
+      <br>
+      <label for="course">Which courses will you take?</label>
+      <br>
+      <label>HTML and CSS</label>
+      <input type="checkbox" name="course" value="1">
+      <label>Javascript</label>
+      <input type="checkbox" name="course" value="2">
+      <label>Mircoservices</label>
+      <input type="checkbox" name="course" value="3">
+      <label>HTML and CSS</label>
+      <input type="checkbox" name="course" value="4">
+      <br>
+      <label for="bio">Tell us more about yourself</label>
+      <br>
+      <textarea name="bio" rows="8" cols="80" placeholder="Type here"></textarea>
+      <button id="submit"type="submit" name="button"></button>
+    </form>
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

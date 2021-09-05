@@ -1,0 +1,20 @@
+#image
+      {
+        height:auto;
+        width:100%;
+        max-width:100px;
+        display:block;
+        text-align: center;
+        padding:11px;
+        margin:auto;
+        
+      }
+#title
+{
+  text-align: center;
+}
+ #img-div
+{
+  height:30%;
+  width:80%;
+}

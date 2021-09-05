@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen -  Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<html>
+
+<body>
+  <header id="header">
+    <nav id="navbar">
+      <header>
+        <h1>REACT
+          <h1>
+      </header>
+      <a class="nav-link" href=#Hello_World>Hello World</a><br/>
+      <a class="nav-link" href=#How_to_Read_This_Guide>How to Read This Guide</a>
+      <br/> <a class="nav-link" href=#Knowledge_Level_Assumptions>Knowledge Level Assumptions</a>
+      <br/> <a class="nav-link" href=#Introducing_JSX>Introducing JSX</a>
+      <br/> <a class="nav-link" href=#Why_JSX?>Why JSX?</a><br/>
+      <a class="nav-link" href=#Embedding_Expressions_in_JSX>Embedding Expressions in JSX</a><br/>
+    </nav>
+  </header>
+  <main id="main-doc">
+    <section id="Hello_World" class="main-section">
+      <header>
+        <h2>Hello World</h2>
+      </header>
+      <ul>
+        <li><a href="#try-react">Try React</a></li>
+        <li><a href="#learn-react">Learn React</a></li>
+        <li><a href="#staying-informed">Staying Informed</a></li>
+        <li><a href="#versioned-documentation">Versioned Documentation</a></li>
+        <li><a href="#something-missing">Something Missing?</a></li>
+      </ul>
+      <p>The smallest React example looks like this:</p>
+      <p>
+        <code>ReactDOM.render(Hello, world!,
+  document.getElementById('root')
+);</code></p>
+      <p>
+        <code>ReactDOM.render(Hello, world!,
+  document.getElementById('root')
+);</code></p>
+      <p>It displays a heading saying “Hello, world!” on the page. Try it on CodePen Click the link above to open an online editor. Feel free to make some changes, and see how they affect the output. Most pages in this guide will have editable examples like
+        this one.
+
+      </p>
+    </section>
+    <section id="How_to_Read_This_Guide" class="main-section">
+      <header>
+        <h2>How to Read This Guide</h2>
+      </header>
+      <p>In this guide, we will examine the building blocks of React apps: elements and components. Once you master them, you can create complex apps from small reusable pieces</p>
+      <p>This guide is designed for people who prefer learning concepts step by step. If you prefer to learn by doing, check out our practical tutorial. You might find this guide and the tutorial complementary to each other.</p>
+      <p>This is the first chapter in a step-by-step guide about main React concepts. You can find a list of all its chapters in the navigation sidebar. If you’re reading this from a mobile device, you can access the navigation by pressing the button in
+        the bottom right corner of your screen.</p>
+      <p>Every chapter in this guide builds on the knowledge introduced in earlier chapters. You can learn most of React by reading the “Main Concepts” guide chapters in the order they appear in the sidebar. For example, “Introducing JSX” is the next chapter
+        after this one.</p>
+    </section>
+    <section id="Knowledge_Level_Assumptions" class="main-section">
+      <header>
+        <h2>Knowledge Level Assumptions</h2>
+      </header>
+      <p>React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language. If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level and enable you to follow
+        along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</p>
+      <p>This guide occasionally uses some of the newer JavaScript syntax in the examples. If you haven’t worked with JavaScript in the last few years, these three points should get you most of the way.</p>
+    </section>
+    <section id="Introducing_JSX" class="main-section">
+      <header>
+        <h2>Introducing JSX</h2>
+      </header>
+
+      <p>
+        <pre><code>const element = <h1>Hello, world!</h1>;</code></pre>
+      </p>
+      <p>This funny tag syntax is neither a string nor HTML.</p>
+      <p>It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+      <p>JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.
+
+      </p>
+    </section>
+    <section id="Why_JSX?" class="main-section">
+      <header>
+        <h2>Why JSX?</h2>
+      </header>
+      <p>React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.</p>
+      <p>Instead of artificially separating technologies by putting markup and logic in separate files, React separates concerns with loosely coupled units called “components” that contain both. We will come back to components in a further section, but if you’re not yet comfortable putting markup in JS, this talk might convince you otherwise.</p>
+      <p>React doesn’t require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.</p>
+      <p>With that out of the way, let’s get started!
+
+</p>
+    </section>
+    <section id="Embedding_Expressions_in_JSX" in JSX class="main-section">
+      <header>
+        <h2>Embedding Expressions in JSX</h2>
+      </header>
+      <p></p>
+      <code>const name = 'Josh Perez';
+const element = <h1>Hello, {name}</h1>;
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);</code>
+      <p></p>
+      <code>function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Harper',
+  lastName: 'Perez'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);</code>
+    </section>
+  </main>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
