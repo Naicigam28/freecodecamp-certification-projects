@@ -21,7 +21,7 @@ class Category:
     def transfer(self,amount,category):
         if(self.check_funds(amount)):
             self.withdraw(amount,f"Transfer to {category.name}")
-            category.deposit(amount,f"Transfer from {category.name}")
+            category.deposit(amount,f"Transfer from {self.name}")
             return True
         return False
         
@@ -38,7 +38,7 @@ class Category:
         transactions=""
         for i in range(titleLen):
             title=title+"*"
-            if (i==(titleLen/2)):
+            if (i+1==((titleLen)/2)):
                 title=title+self.name
                 
         for transaction in (self.ledger):
@@ -53,5 +53,3 @@ def create_spend_chart(categories):
         total+=category.get_balance()
     for i in range (100,0,-10):
         print(f"{i}| ")
-    print(total)
-    
