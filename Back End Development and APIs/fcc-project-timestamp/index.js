@@ -22,18 +22,32 @@ app.get("/", function (req, res) {
 app.get("/api/hello", function (req, res) {
   res.json({ greeting: "hello API" });
 });
+app.get("/api", function (req, res) {
+  let date = new Date();
+  let utc = date.toUTCString();
+  const timestampInMs = date.getTime();
 
+  // 👇️ timestamp in seconds (Unix timestamp)
+  // const unix = Math.floor(date.getTime() / 1000);
+  res.json({ unix: timestampInMs, utc });
+});
 //parse date
 app.get("/api/:date", function (req, res) {
   let dateInput = req.params.date;
-  let unix = Date.parse(dateInput);
 
-  if (!unix) {
+  let unix = Date.parse(dateInput);
+  if (dateInput.trim() == "") {
+    unix = Date.now();
+  } else if (!unix) {
     unix = parseInt(dateInput);
   }
   let date = new Date(unix);
   let utc = date.toUTCString();
-  res.json({ unix, utc });
+  if (utc == "Invalid Date") {
+    res.json({ error: utc });
+  } else {
+    res.json({ unix, utc });
+  }
 });
 
 // listen for requests :)
